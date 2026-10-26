@@ -452,7 +452,7 @@
   // extra speed toward the player, and whether it flies at head height.
   const TYPES = {
     castle:   { w: 34, boxes: [[3, -27, 28, 27]], vx: 0 },
-    umbrella: { w: 28, boxes: [[2, -9, 24, 9], [11, -34, 6, 27]], vx: 0 },
+    capybara: { w: 56, boxes: [[6, -24, 46, 22]], vx: 0 },
     skate:    { w: 44, boxes: [[2, -13, 40, 11]], vx: 50 },
     pigeon:   { w: 24, boxes: [[3, -19, 18, 17]], vx: 18 },
     flyer:    { w: 28, boxes: [[3, -100, 22, 12]], vx: 60, flying: true },
@@ -460,7 +460,7 @@
 
   function spawnObstacle() {
     const t = game.runTime;
-    const pool = ['castle', 'umbrella', 'skate', 'pigeon'];
+    const pool = ['castle', 'capybara', 'skate', 'pigeon'];
     if (t > 6) pool.push('flyer');
     if (t > 18) pool.push('flyer');
     const last = game.obstacles[game.obstacles.length - 1];
@@ -680,7 +680,11 @@
       rect(x, G - 1, w, 2, '#d9d1c1');
     }
     if (o.type === 'castle') pc.drawImage(SPR.castle, x, G - 15);
-    else if (o.type === 'umbrella') pc.drawImage(SPR.umbrella, x, G - 19);
+    else if (o.type === 'capybara') {
+      // Calm capybara with an orange on its head; it blinks now and then.
+      const blink = (o.phase * 1.3) % 3 > 2.85 ? 1 : 0;
+      pc.drawImage(SPR['capy' + blink], x, G - 17);
+    }
     else if (o.type === 'skate') pc.drawImage(SPR['skate' + (Math.floor(o.phase * 14) % 2)], x, G - 8);
     else if (o.type === 'pigeon') pc.drawImage(SPR['pigeon' + flap], x, G - 10);
     else if (o.type === 'flyer') pc.drawImage(SPR['flyer' + flap], x, ax(view.g - 102));

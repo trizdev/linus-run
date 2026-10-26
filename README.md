@@ -32,7 +32,7 @@ Text and the HUD are drawn at full resolution on top so they stay readable.
 - **Jump:** tap, click, `Space` or `↑` (also `W`).
 - **Higher jump:** hold the button a little longer.
 - **Double jump:** press again while in the air.
-- Jump over sand castles, umbrella bases, skateboards and walking pigeons.
+- Jump over sand castles, capybaras, skateboards and walking pigeons.
 - Do **not** jump into the flying pigeons: stay low and run underneath.
 - Grab the treats (bones) for +25 points each.
 - `M` or the speaker button toggles sound and music (on by default; the
