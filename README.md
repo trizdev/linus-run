@@ -4,6 +4,13 @@ A small endless runner starring Linus, a white Maltese, running along the beach
 promenade of Balneário Camboriú. Everything is drawn in code on a canvas: no
 images, no external files, no network requests.
 
+**[Play in your browser](https://trizdev.github.io/linus-run/)**
+
+It works on desktop and mobile, with no download or install: open the link
+and tap, click or press `Space` to start.
+
+![Linus Run gameplay: Linus, a white Maltese, jumps over a skateboard on the beach boardwalk](docs/screenshot.png)
+
 ## Art style
 
 The game uses 16-bit style pixel art. Linus and the props are hand-placed pixel
